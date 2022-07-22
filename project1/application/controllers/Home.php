@@ -13,7 +13,15 @@ class Home extends CI_Controller{
             $data['contact'] = $this->input->post('contact',true);
             $data['country'] = $this->input->post('country',true);
             $data['city'] = $this->input->post('city',true);
-        var_dump($data);
+            $result = $this->modhome->addnewUser($data);
+            if ($result){
+                echo 'successfully inserted';
+            }
+            else{
+                echo 'Some error occured';
+            }
+
+        
         }
         }
     

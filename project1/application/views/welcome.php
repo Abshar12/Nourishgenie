@@ -9,7 +9,7 @@
   <div class = "container">
         <div class="row">
             <div class="col-md-6">
-                <h1>Signup</h1>
+                <h1>Please fill the form</h1>
                 
                 <?php echo form_open(action:'home/newUser' , );?>
                 
