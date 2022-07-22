@@ -10,16 +10,15 @@
         <div class="row">
             <div class="col-md-6">
                 <h1>Signup</h1>
-                <?php if ($this->session->flashdata('error')) {
-                    echo $this->session->flashdata('error');
-                }
-                ?>
-                <?php echo form_open(action:'home/newUser' , attributes:'');?>
+                
+                <?php echo form_open(action:'home/newUser' , );?>
+                
+                
                 <div class = "form-group">
                     <label>Enter your name</label>
                     <?php
-                        $fullname = array('name'=>"fullname" , 'class'=>"form_control");
-                        echo form_input($fullname);
+                        $name = array('name'=>"name" , 'class'=>"form_control");
+                        echo form_input($name);
                     ?>
                 </div>
                 <div class = "form-group">
@@ -30,21 +29,21 @@
                     ?>
                 </div>
                 <div class = "form-group">
-                    <label>Enter your contact</label>
+                    <label>Enter your contact no</label>
                     <?php
                         $contact = array('name'=>"contact" , 'class'=>"form_control");
                         echo form_input($contact);
                     ?>
                 </div>
                 <div class = "form-group">
-                    <label>Choose your country</label>
+                    <label>Select your Country</label>
                     <?php
                         $country = array('name'=>"country" , 'class'=>"form_control");
                         echo form_input($country);
                     ?>
                 </div>
                 <div class = "form-group">
-                    <label>Choose your city</label>
+                    <label>Select your City</label>
                     <?php
                         $city = array('name'=>"city" , 'class'=>"form_control");
                         echo form_input($city);
