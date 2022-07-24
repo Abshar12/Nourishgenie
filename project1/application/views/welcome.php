@@ -1,66 +1,59 @@
-<?php
-?>
-<html>
-  <head>
-    <title>Welcome to Codeignitor</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  </head>
-  <body>
-  <div class = "container">
-        <div class="row">
-            <div class="col-md-6">
-                <h1>Please fill the form</h1>
-                
-                <?php echo form_open(action:'home/newUser' , );?>
-                
-                
-                <div class = "form-group">
-                    <label>Enter your name</label>
-                    <?php
-                        $name = array('name'=>"name" , 'class'=>"form_control");
-                        echo form_input($name);
-                    ?>
-                </div>
-                <div class = "form-group">
-                    <label>Enter your age</label>
-                    <?php
-                        $age = array('name'=>"age" , 'class'=>"form_control");
-                        echo form_input($age);
-                    ?>
-                </div>
-                <div class = "form-group">
-                    <label>Enter your contact no</label>
-                    <?php
-                        $contact = array('name'=>"contact" , 'class'=>"form_control");
-                        echo form_input($contact);
-                    ?>
-                </div>
-                <div class = "form-group">
-                    <label>Select your Country</label>
-                    <?php
-                        $country = array('name'=>"country" , 'class'=>"form_control");
-                        echo form_input($country);
-                    ?>
-                </div>
-                <div class = "form-group">
-                    <label>Select your City</label>
-                    <?php
-                        $city = array('name'=>"city" , 'class'=>"form_control");
-                        echo form_input($city);
-                    ?>
-                </div>
-                <div class = "form-group">
-                    <?php
-                        echo form_submit(data:'Signup' , value:'Signup' , extra:'btn btn-primary');
-                    ?>
-                </div>
-            
-                <?php echo form_close();?>
-            </div>
-        </div>
-  </div>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-  </body>
+    <title>Signup</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="bg-dark text-white p-3">Please fill this form</h3>
+                <div class="form group">
+                    <label for=""><h5>Name</h5></label>
+                    <input type="text" name="name" id="name" value="" class="form-control">
+
+                </div>
+                <div class="form group">
+                    <label for=""><h5>Age</h5></label>
+                    <input type="int" name="age" id="age" value="" class="form-control">
+
+                </div>
+                <div class="form group">
+                    <label for=""><h5>Contact</h5></label>
+                    <input type="int" name="contact" id="contact" value="" class="form-control">
+
+                </div>
+                <div class="form group">
+                    <label for=""><h5>Country</h5></label>
+                    <select name="country" id="country" class="form-control">
+                        <option value="">Select your country</option>
+                    </select>
+                </div>
+                <div class="form group">
+                    <label for=""><h5>City</h5></label>
+                    <select name="state" id="state" class="form-control">
+                        <option value="">Select your state</option>
+                    </select>
+
+                </div>
+                <div class="form group">
+                    <label for=""><h5>City</h5></label>
+                    <select name="city" id="city" class="form-control">
+                        <option value="">Select your city</option>
+                    </select>
+
+                </div>
+                <button class="btn btn-primary m-5" type="Submit">Signup</button>
+
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+<script  src = "<?php echo base_url(uri:'assets/js/custom.js');?>"></Script>
 </html>
