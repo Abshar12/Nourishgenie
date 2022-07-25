@@ -27,33 +27,45 @@
                     <input type="int" name="contact" id="contact" value="" class="form-control">
 
                 </div>
-                <div class="form group">
-                    <label for=""><h5>Country</h5></label>
-                    <select name="country" id="country" class="form-control">
-                        <option value="">Select your country</option>
-                    </select>
-                </div>
-                <div class="form group">
-                    <label for=""><h5>City</h5></label>
-                    <select name="state" id="state" class="form-control">
-                        <option value="">Select your state</option>
-                    </select>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
 
-                </div>
-                <div class="form group">
-                    <label for=""><h5>City</h5></label>
-                    <select name="city" id="city" class="form-control">
-                        <option value="">Select your city</option>
-                    </select>
+</script>
+<script  src = "<?php echo base_url(uri:'assets/js/custom.js');?>">
+</Script>
 
-                </div>
-                <button class="btn btn-primary m-5" type="Submit">Signup</button>
+</script>
 
-            </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-select" id="country">
+                <option value="">country</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-select" id="state">
+                <option value="">state</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-select" id="city">
+                <option value="">city</option>
+            </select>
+        </div>
+        <button class="btn btn-primary m-5" type="Submit">Signup</button>
+
+    </div>
+        </div>
+
+    </div>
+
+</div>
 
         </div>
     </div>
     
 </body>
-<script  src = "<?php echo base_url(uri:'assets/js/custom.js');?>"></Script>
+
 </html>
