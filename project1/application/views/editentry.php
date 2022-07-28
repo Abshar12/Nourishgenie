@@ -18,13 +18,16 @@
                 <?php if ($this->session->flashdata('message')){
                     echo $this->session->flashdata('message');
                     }
+                $user = $records->result_array();
                     ?>
-                <?php echo form_open(action:'home/newUser' , attributes:'');?>
+                
+                <?php echo form_open(action:'home/update' , attributes:'');?>
 
                 <div class="form group">
                     <label for=""><h5>Name</h5></label>
                     <?php
-                    $name = array('name'=>"name" , 'id'=>"name" ,'value'=>"" , 'class'=>"form-control");
+                    $name = array('name'=>"name" , 'id'=>"name" ,'value'=>"" , 'class'=>"form-control" );
+                    
                     echo form_input($name);
                     ?>
 
@@ -72,7 +75,7 @@
                 
                 
                 
-                <button class="btn btn-primary m-5" type="Submit">Signup</button>
+                <button class="btn btn-primary m-5" type="Submit">Update</button>
 
                     </div>
                         </div>
