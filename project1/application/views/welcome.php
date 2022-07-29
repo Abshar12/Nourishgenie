@@ -8,64 +8,57 @@
     <title>Signup</title>
 </head>
 <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+</script>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h3 class="bg-dark text-white p-3">Please fill this form</h3>
+                <?php if ($this->session->flashdata('message')){
+                    echo $this->session->flashdata('message');
+                    }
+                    ?>
+                <?php echo form_open(action:'home/newUser' , attributes:'');?>
+
                 <div class="form group">
-                    <label for=""><h5>Name</h5></label>
-                    <input type="text" name="name" id="name" value="" class="form-control">
+                    <input type="text" name="name" class="form-control" placeholder="Enter your name">
 
                 </div>
                 <div class="form group">
-                    <label for=""><h5>Age</h5></label>
-                    <input type="int" name="age" id="age" value="" class="form-control">
+                <input type="int" name="age" class="form-control" placeholder="Enter your age">
 
                 </div>
                 <div class="form group">
-                    <label for=""><h5>Contact</h5></label>
-                    <input type="int" name="contact" id="contact" value="" class="form-control">
+                <input type="int" name="contact" class="form-control" placeholder="Enter your contact">
 
                 </div>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+                <div class="form group">
+                <input type="text" name="country" class="form-control" placeholder="Enter your country">
 
-</script>
-<script  src = "<?php echo base_url(uri:'assets/js/custom.js');?>">
-</Script>
+                </div>
+                <div class="form group">
+                <input type="text" name="state" class="form-control" placeholder="Enter your state">
 
-</script>
+                </div>
+                <div class="form group">
+                <input type="text" name="city" class="form-control" placeholder="Enter your city">
+                </div>
+                
+                
+                
+                <button class="btn btn-primary m-5" type="Submit">Signup</button>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">">
+                    </div>
+                        </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <select class="form-select" id="country">
-                <option value="">country</option>
-            </select>
-        </div>
-        <div class="col-md-4">
-            <select class="form-select" id="state">
-                <option value="">state</option>
-            </select>
-        </div>
-        <div class="col-md-4">
-            <select class="form-select" id="city">
-                <option value="">city</option>
-            </select>
-        </div>
-        <button class="btn btn-primary m-5" type="Submit">Signup</button>
+                    </div>
 
-    </div>
-        </div>
+                </div>
 
-    </div>
+                        </div>
+                    </div>
 
-</div>
-
-        </div>
-    </div>
-    
 </body>
 
 </html>
