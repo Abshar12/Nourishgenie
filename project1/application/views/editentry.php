@@ -21,6 +21,7 @@
                 $user = $records->result_array();
                     ?>
                 
+<<<<<<< HEAD
                 <form action="<?php echo site_url(uri:'home/updateUser')?>" method="post">
 
                 <div class="form-group">
@@ -55,6 +56,64 @@
                 <button class="btn btn-primary m-5" type="Submit">Update</button>
                 </div>
                 </form>
+=======
+                <?php echo form_open(action:'home/update' , attributes:'');?>
+
+                <div class="form group">
+                    <label for=""><h5>Name</h5></label>
+                    <?php
+                    $name = array('name'=>"name" , 'id'=>"name" ,'value'=>"" , 'class'=>"form-control" );
+                    
+                    echo form_input($name);
+                    ?>
+
+                </div>
+                <div class="form group">
+                    <label for=""><h5>Age</h5></label>
+                    <?php
+                    $age = array('input type'=>"int" , 'name'=>"age" , 'id'=>"age" , 'value'=>"" , 'class'=>"form-control");
+                    echo form_input($age);
+                    ?>
+
+                </div>
+                <div class="form group">
+                    <label for=""><h5>Contact</h5></label>
+                    <?php
+                    $contact = array('input type'=>"int" , 'name'=>"contact" , 'id'=>"contact" , 'value'=>"" , 'class'=>"form-control");
+                    echo form_input($contact)
+                    ?>
+
+                </div>
+                <div class="form group">
+                    <label for=""><h5>country</h5></label>
+                    <?php
+                    $country = array('input type'=>"text" , 'name'=>"country" , 'id'=>"country" , 'value'=>"" , 'class'=>"form-control");
+                    echo form_input($country)
+                    ?>
+
+                </div>
+                <div class="form group">
+                    <label for=""><h5>state</h5></label>
+                    <?php
+                    $state = array('input type'=>"int" , 'name'=>"state" , 'id'=>"state" , 'value'=>"" , 'class'=>"form-control");
+                    echo form_input($state)
+                    ?>
+
+                </div>
+                <div class="form group">
+                    <label for=""><h5>city</h5></label>
+                    <?php
+                    $city = array('input type'=>"int" , 'name'=>"city" , 'id'=>"city" , 'value'=>"" , 'class'=>"form-control");
+                    echo form_input($city)
+                    ?>
+
+                </div>
+                
+                
+                
+                <button class="btn btn-primary m-5" type="Submit">Update</button>
+
+>>>>>>> 724fc32a714d9bdd819786e10bdca0db2f950c5e
                     </div>
                         </div>
 

@@ -47,7 +47,11 @@ class Home extends CI_Controller{
         $this->load->view('allRecords',$data);
     }
 
+<<<<<<< HEAD
     public function update($id = null)
+=======
+    public function update($id)
+>>>>>>> 724fc32a714d9bdd819786e10bdca0db2f950c5e
     {
        if (isset($id) && !empty($id))
        {
@@ -64,6 +68,7 @@ class Home extends CI_Controller{
        }
        else
        {
+<<<<<<< HEAD
         $this->session->set_flashdata('message','Id is required');
         redirect(uri:'home/allRecords');
        }
@@ -95,4 +100,9 @@ class Home extends CI_Controller{
         }
         
     }
+=======
+            echo 'id is required';
+       }
+    }
+>>>>>>> 724fc32a714d9bdd819786e10bdca0db2f950c5e
 }
