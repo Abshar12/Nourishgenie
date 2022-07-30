@@ -15,7 +15,7 @@ class Home extends CI_Controller{
             $data['state'] = $this->input->post('state',true);
             $data['city'] = $this->input->post('city',true);
             
-            $results = $this->modhome->checkstudent($data['contact']);
+            $results = $this->modhome->checkuser($data['contact']);
 
             if ($results->num_rows()>0){
                 $this->session->set_flashdata('message','This student with contact no:  '.$data['contact'] . ' already exist');
@@ -47,62 +47,62 @@ class Home extends CI_Controller{
         $this->load->view('allRecords',$data);
     }
 
-<<<<<<< HEAD
     public function update($id = null)
-=======
-    public function update($id)
->>>>>>> 724fc32a714d9bdd819786e10bdca0db2f950c5e
     {
-       if (isset($id) && !empty($id))
-       {
+        if (isset($id) && !empty($id))
+            
+        {
            $data['records'] = $this->modhome->checkUserId($id);
            if ($data['records']->num_rows() > 0)
            {
-            $this->load->view('editentry',$data);
+                $this->load->view('Edituser',$data);
            }
+           else{
+            $this->session->set_flashdata('message','Recordnot available check id and try again');
+            redirect(uri:'home/allRecords');
+           }
+        }
+
         else
         {
-            $this->session->set_flashdata('message','Record is not available');
-                    redirect(uri:'home/allRecords');
+            $this->session->set_flashdata('message','Id is required');
+            redirect(uri:'home/allRecords');
         }
-       }
-       else
-       {
-<<<<<<< HEAD
-        $this->session->set_flashdata('message','Id is required');
-        redirect(uri:'home/allRecords');
-       }
     }
 
     public function updateUser()
     {
-        $data['name'] = $this->input->post('name',true);
-        $data['age'] = $this->input->post('age',true);
-        $data['contact'] = $this->input->post('contact',true);
-        $data['country'] = $this->input->post('country',true);
-        $data['state'] = $this->input->post('state',true);
-        $data['city'] = $this->input->post('city',true);
-        $uid = $this->input->post('uid',true);
+      $data['name'] = $this->input->post('name',true);
+      $data['age'] =  $this->input->post('age',true);
+      $data['contact'] =  $this->input->post('contact',true);
+      $data['country'] =  $this->input->post('country',true);
+      $data['state'] =  $this->input->post('state',true);
+      $data['city'] =  $this->input->post('city',true);
+      $uid  = $this->input->post('uid',true);
 
-        if (!empty($data['name']) && !empty($data['age']) && !empty($data['contact']) && !empty($data['country']) && !empty($data['state']) && !empty($data['city']) && !empty($uid))
+      if (!empty($data['name']) && !empty($data['age']) && !empty($data['contact']) && !empty($data['country']) && !empty($data['state']) && !empty($data['city']) &&!empty($uid))
+      {
+        $updated = $this->modhome->updateUser($data,$uid);
+        if ($updated)
         {
-           $updated = $this->modhome->updateUser($data , $uid);
-           if ($updated)
-           {
-            $this->session->set_flashdata('message','We have successfully updated the records');
+            $this->session->set_flashdata('message','we have successfully updated your record');
             redirect(uri:'home/allRecords');
-           }
         }
         else
         {
-            $this->session->set_flashdata('message','Sorry! Try again');
+            $this->session->set_flashdata('message','we cannot update the record right now, please try again after some time');
             redirect(uri:'home/allRecords');
         }
+      }
+      else
+      {
+        $this->session->set_flashdata('message','please check required fields and try again');
+            redirect(uri:'home/allRecords');
+      }
+    }
         
-    }
-=======
-            echo 'id is required';
-       }
-    }
->>>>>>> 724fc32a714d9bdd819786e10bdca0db2f950c5e
+    
+        
 }
+
+

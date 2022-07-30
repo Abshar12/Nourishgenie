@@ -18,38 +18,40 @@
                 <?php if ($this->session->flashdata('message')){
                     echo $this->session->flashdata('message');
                     }
+                    $userrecord = $records->result_array()
                     ?>
-                <?php echo form_open(action:'home/newUser' , attributes:'');?>
+                <?php echo form_open(action:'home/updateUser' , attributes:'');?>
 
                 <div class="form group">
 
-                    <input type="text" name="name" class="form-control" placeholder="Enter your name">
+                    <input type="text" name="name" class="form-control" placeholder="Enter your name" value="<?php echo $userrecord[0]['name'] ?>">
 
                 </div>
                 <div class="form group">
-                <input type="int" name="age" class="form-control" placeholder="Enter your age">
+                <input type="int" name="age" class="form-control" placeholder="Enter your age" value="<?php echo $userrecord[0]['age'] ?>">
 
                 </div>
                 <div class="form group">
-                <input type="int" name="contact" class="form-control" placeholder="Enter your contact">
+                <input type="int" name="contact" class="form-control" placeholder="Enter your contact" value="<?php echo $userrecord[0]['contact'] ?>">
 
                 </div>
                 <div class="form group">
-                <input type="text" name="country" class="form-control" placeholder="Enter your country">
+                <input type="text" name="country" class="form-control" placeholder="Enter your country" value="<?php echo $userrecord[0]['country'] ?>">
 
                 </div>
                 <div class="form group">
-                <input type="text" name="state" class="form-control" placeholder="Enter your state">
+                <input type="text" name="state" class="form-control" placeholder="Enter your state" value="<?php echo $userrecord[0]['state'] ?>">
 
                 </div>
                 <div class="form group">
-                <input type="text" name="city" class="form-control" placeholder="Enter your city">
+                <input type="text" name="city" class="form-control" placeholder="Enter your city" value="<?php echo $userrecord[0]['city'] ?>">
                 </div>
                 
+                <input type="hidden" value="<?php echo $userrecord[0]['id']?>" name="uid">
+                <div class="form-group">
+                <button class="btn btn-primary m-5" type="Submit">Update</button>
+                </div>
                 
-                
-                <button class="btn btn-primary m-5" type="Submit">Signup</button>
-
                     </div>
                         </div>
 
