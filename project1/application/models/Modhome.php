@@ -27,4 +27,10 @@ class Modhome extends CI_Model{
         $this->db->where('id',$uid);
        return $this->db->update('crud',$data);
     }
+
+    public function deleteUser($id)
+    {
+        $this->db->where('id',$id);
+        return $this->db->delete('crud',);
+    }
 }

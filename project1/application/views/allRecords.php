@@ -25,6 +25,7 @@
             <th>State</th>
             <th>City</th>
             <th>Edit</th>
+            <th>Delete</th>
         <?php foreach($allRecords->result() as $rows):?>
             <tr>
                 <td>
@@ -52,6 +53,9 @@
                     <a href="<?php echo site_url(uri:'home/update/'.$rows->id)?>" class="btn btn-primary">
                     Edit
                 </a>
+                </td>
+                <td>
+                    <a href="<?php echo site_url(uri:'home/delete/'.$rows->id)?>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         <?php endforeach;?>

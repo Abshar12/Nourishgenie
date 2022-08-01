@@ -99,6 +99,40 @@ class Home extends CI_Controller{
         $this->session->set_flashdata('message','please check required fields and try again');
             redirect(uri:'home/allRecords');
       }
+
+    
+    }
+
+    public function delete($id = null)
+    {
+        if ($id)
+        {
+           $urecord = $this->modhome->checkUserId($id);
+           if ($urecord->num_rows() > 0)
+           {
+            $udelete = $this->modhome->deleteUser($id);
+            if ($udelete)
+            {
+                $this->session->set_flashdata('message','Record deleted successfully');
+            redirect(uri:'home/allRecords');
+            }
+            else
+            {
+                $this->session->set_flashdata('message','Cannot delete right now please try again after some time');
+            redirect(uri:'home/allRecords');
+            }
+           }
+           else
+           {
+            $this->session->set_flashdata('message','Record not found');
+            redirect(uri:'home/allRecords');
+           }
+        }
+        else
+        {
+            $this->session->set_flashdata('message','Something went wrong');
+            redirect(uri:'home/allRecords');
+        }
     }
         
     

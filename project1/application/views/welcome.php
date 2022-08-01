@@ -8,9 +8,6 @@
     <title>Signup</title>
 </head>
 <body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-
-</script>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -20,48 +17,51 @@
                     }
                     ?>
                 <?php echo form_open(action:'home/newUser' , attributes:'');?>
-
                 <div class="form group">
-
-                    <input type="text" name="name" class="form-control" placeholder="Enter your name">
-
-                </div>
-                <div class="form group">
-                <input type="int" name="age" class="form-control" placeholder="Enter your age">
+                    <label for=""><h5>Name</h5></label>
+                    <input type="text" name="name" id="name" value="" class="form-control">
 
                 </div>
                 <div class="form group">
-                <input type="int" name="contact" class="form-control" placeholder="Enter your contact">
+                    <label for=""><h5>Age</h5></label>
+                    <input type="int" name="age" id="age" value="" class="form-control">
 
                 </div>
                 <div class="form group">
-                <input type="text" name="country" class="form-control" placeholder="Enter your country">
+                    <label for=""><h5>Contact</h5></label>
+                    <input type="int" name="contact" id="contact" value="" class="form-control">
 
-                </div>
-                <div class="form group">
-                <input type="text" name="state" class="form-control" placeholder="Enter your state">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
 
-                </div>
-                <div class="form group">
-                <input type="text" name="city" class="form-control" placeholder="Enter your city">
-                </div>
-                
-                
-                
-                <button class="btn btn-primary m-5" type="Submit">Signup</button>
+</script>
+<script src="custom.js">
 
-                    </div>
-                        </div>
+</script>
 
-                    </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-                </div>
+<div class="container">
+    <div class="row" >
+        <div class="col-md-12 m-2" >
+            <select class="form-select" id="country" name="country">
+                <option value="">country</option>
+            </select>
+        </div>
+        <div class="col-md-12 m-2">
+            <select class="form-select" id="state" name="state">
+                <option value="">state</option>
+            </select>
+        </div>
+        <div class="col-md-12 m-2">
+            <select class="form-select" id="city" name="city">
+                <option value="">city</option>
+            </select>
+        </div>
+        <button class="btn btn-primary m-5" type="Submit">Signup</button>
 
-                        </div>
-                    </div>
+    </div>
+        </div>
 
+    </div>
 
-                    
-</body>
-
-</html>
+</div>
