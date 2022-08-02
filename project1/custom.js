@@ -49,6 +49,7 @@ function getCountry(auth_token){
         url: 'https://www.universal-tutorial.com/api/states/' + country_name,
         success: function(data){
             $('#state').empty();
+            $('#state').append("aaaa");
             data.forEach(element => {
                 $('#state').append('<option value="'+element.state_name+'">'+element.state_name+'</option>');
             });

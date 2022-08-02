@@ -14,6 +14,7 @@ class Home extends CI_Controller{
             $data['country'] = $this->input->post('country',true);
             $data['state'] = $this->input->post('state',true);
             $data['city'] = $this->input->post('city',true);
+           
             
             $results = $this->modhome->checkuser($data['contact']);
 
@@ -47,7 +48,7 @@ class Home extends CI_Controller{
         $this->load->view('allRecords',$data);
     }
 
-    public function update($id = null)
+    public function update($id)
     {
         if (isset($id) && !empty($id))
             

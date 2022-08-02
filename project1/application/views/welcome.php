@@ -24,12 +24,12 @@
                 </div>
                 <div class="form group">
                     <label for=""><h5>Age</h5></label>
-                    <input type="int" name="age" id="age" value="" class="form-control">
+                    <input type="number" name="age" id="age" value="" class="form-control">
 
                 </div>
                 <div class="form group">
                     <label for=""><h5>Contact</h5></label>
-                    <input type="int" name="contact" id="contact" value="" class="form-control">
+                    <input type="number" name="contact" id="contact" value="" class="form-control">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
 

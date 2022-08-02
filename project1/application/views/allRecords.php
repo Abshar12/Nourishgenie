@@ -63,7 +63,7 @@
         <?php else: ?>
             <h1>Not working </h1>
         <?php endif; ?>
-        <a href="<?php echo site_url(uri:'home')?>">
+        <a href="<?php echo site_url(uri:'')?>">
         Insert a new record
         </a>
 

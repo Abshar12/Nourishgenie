@@ -8,6 +8,9 @@
     <title>Signup</title>
 </head>
 <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+</script>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -18,52 +21,52 @@
                     $userrecord = $records->result_array()
                     ?>
                 <?php echo form_open(action:'home/updateUser' , attributes:'');?>
+
                 <div class="form group">
-                    <label for=""><h5>Name</h5></label>
-                    <input type="text" name="name" id="name" value="" class="form-control" value="<?php echo $userrecord[0]['name'] ?>">
+
+                    <input type="text" name="name" class="form-control" placeholder="Enter your name" value="<?php echo $userrecord[0]['name'] ?>">
 
                 </div>
                 <div class="form group">
-                    <label for=""><h5>Age</h5></label>
-                    <input type="int" name="age" id="age" value="" class="form-control" value="<?php echo $userrecord[0]['age'] ?>">
+                <input type="number" name="age" class="form-control" placeholder="Enter your age" value="<?php echo $userrecord[0]['age'] ?>">
 
                 </div>
                 <div class="form group">
-                    <label for=""><h5>Contact</h5></label>
-                    <input type="int" name="contact" id="contact" value="" class="form-control" value="<?php echo $userrecord[0]['contact'] ?>">
+                <input type="number" name="contact" class="form-control" placeholder="Enter your contact" value="<?php echo $userrecord[0]['contact'] ?>">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+                </div>
+                <div class="form group">
+                <input type="text" name="country" class="form-control" placeholder="Enter your country" value="<?php echo $userrecord[0]['country'] ?>">
 
-</script>
-<script src="custom.js">
+                </div>
+                <div class="form group">
+                <input type="text" name="state" class="form-control" placeholder="Enter your state" value="<?php echo $userrecord[0]['state'] ?>">
 
-</script>
+                </div>
+                <div class="form group">
+                <input type="text" name="city" class="form-control" placeholder="Enter your city" value="<?php echo $userrecord[0]['city'] ?>">
+                </div>
+                
+                <input type="hidden" value="<?php echo $userrecord[0]['id']?>" name="uid">
+                <div class="form-group">
+                <button class="btn btn-primary m-5" type="Submit">Update</button>
+                </div>
+                
+                    </div>
+                        </div>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+                    </div>
 
-<div class="container">
-    <div class="row" >
-        <div class="col-md-12 m-2" >
-            <select class="form-select" id="country" name="country" value="<?php echo $userrecord[0]['country'] ?>">
-                <option value="">country</option>
-            </select>
-        </div>
-        <div class="col-md-12 m-2">
-            <select class="form-select" id="state" name="state" value="<?php echo $userrecord[0]['state'] ?>">
-                <option value="">state</option>
-            </select>
-        </div>
-        <div class="col-md-12 m-2">
-            <select class="form-select" id="city" name="city" value="<?php echo $userrecord[0]['city'] ?>">
-                <option value="">city</option>
-            </select>
-        </div>
-        <input type="hidden" value="<?php echo $userrecord[0]['id']?>" name="uid">
-        <button class="btn btn-primary m-5" type="Submit">Update</button>
+                </div>
 
-    </div>
-        </div>
+                        </div>
+                    </div>
 
-    </div>
 
-</div>
+                    
+</body>
+
+</html>
+
+
+
