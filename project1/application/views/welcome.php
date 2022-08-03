@@ -43,21 +43,24 @@
 <div class="container">
     <div class="row" >
         <div class="col-md-12 m-2" >
-            <select class="form-select" id="country" name="country">
-                <option value="">country</option>
+            <select class="form-select" id="country" name="country" >
+            <option value="">country</option>
+                
             </select>
         </div>
         <div class="col-md-12 m-2">
             <select class="form-select" id="state" name="state">
+            
                 <option value="">state</option>
             </select>
         </div>
         <div class="col-md-12 m-2">
             <select class="form-select" id="city" name="city">
-                <option value="">city</option>
+            
+                <option value="" selected>city</option>
             </select>
         </div>
-        <button class="btn btn-primary m-5" type="Submit">Signup</button>
+        <button class="btn btn-primary m-5" type="Submit">Signup </button>
 
     </div>
         </div>

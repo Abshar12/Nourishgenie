@@ -28,6 +28,7 @@ function getCountry(auth_token){
         type: 'get',
         url: 'https://www.universal-tutorial.com/api/countries/',
         success: function(data){
+            
             data.forEach(element => {
                 $('#country').append('<option value="'+element.country_name+'">'+element.country_name+'</option>');
             });
@@ -50,6 +51,7 @@ function getCountry(auth_token){
         success: function(data){
             $('#state').empty();
             $('#state').append("aaaa");
+            
             data.forEach(element => {
                 $('#state').append('<option value="'+element.state_name+'">'+element.state_name+'</option>');
             });

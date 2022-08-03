@@ -59,7 +59,7 @@ class Home extends CI_Controller{
                 $this->load->view('Edituser',$data);
            }
            else{
-            $this->session->set_flashdata('message','Recordnot available check id and try again');
+            $this->session->set_flashdata('message','Record not available check id and try again');
             redirect(uri:'home/allRecords');
            }
         }

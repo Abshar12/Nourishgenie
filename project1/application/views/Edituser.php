@@ -33,7 +33,7 @@
                 </div>
                 <div class="form group">
                 <input type="number" name="contact" class="form-control" placeholder="Enter your contact" value="<?php echo $userrecord[0]['contact'] ?>">
-
+                
                 </div>
                 <div class="form group">
                 <input type="text" name="country" class="form-control" placeholder="Enter your country" value="<?php echo $userrecord[0]['country'] ?>">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="form group">
                 <input type="text" name="city" class="form-control" placeholder="Enter your city" value="<?php echo $userrecord[0]['city'] ?>">
-                </div>
+
                 
                 <input type="hidden" value="<?php echo $userrecord[0]['id']?>" name="uid">
                 <div class="form-group">
