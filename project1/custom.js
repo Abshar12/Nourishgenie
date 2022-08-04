@@ -18,6 +18,7 @@ $(document).ready(function(){
     })
     $('#country').change(function(){
         getState();
+        getCity();
     })
     $('#state').change(function(){
         getCity();
@@ -50,8 +51,7 @@ function getCountry(auth_token){
         url: 'https://www.universal-tutorial.com/api/states/' + country_name,
         success: function(data){
             $('#state').empty();
-            $('#state').append("aaaa");
-            
+            $('#state').append("<option selected>Choose State</option>");
             data.forEach(element => {
                 $('#state').append('<option value="'+element.state_name+'">'+element.state_name+'</option>');
             });
@@ -73,6 +73,7 @@ function getCity(){
         url: 'https://www.universal-tutorial.com/api/cities/' + state_name,
         success: function(data){
             $('#city').empty();
+            $('#city').append("<option selected>Choose city</option>");
             data.forEach(element => {
                 $('#city').append('<option value="'+element.city_name+'">'+element.city_name+'</option>');
             });
