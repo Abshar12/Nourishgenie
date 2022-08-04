@@ -38,7 +38,9 @@
                     <label for="">
                         <h5>Contact</h5>
                     </label>
-                    <input type="number" name="contact" id="contact" value="<?php echo $userrecord[0]['contact'] ?>" class="form-control">
+                    <input type="number" name="contact" id="contact" value="<?php echo $userrecord[0]['contact'] ?>" class="form-control"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="10">
                 </div>
             </div>
         </div>

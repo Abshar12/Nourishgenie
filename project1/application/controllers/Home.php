@@ -14,13 +14,17 @@ class Home extends CI_Controller{
             $data['country'] = $this->input->post('country',true);
             $data['state'] = $this->input->post('state',true);
             $data['city'] = $this->input->post('city',true);
-           
+
+            if (!empty($data['name']) && !empty($data['age']) && !empty($data['contact']) && !empty($data['country']) && !empty($data['state']) && !empty($data['city']))
+            {
+
+            
             
             $results = $this->modhome->checkuser($data['contact']);
 
             if ($results->num_rows()>0){
                 $this->session->set_flashdata('message','This student with contact no:  '.$data['contact'] . ' already exist');
-                redirect(uri:'home/allRecords');
+                redirect(uri:'');
             }
             else
             {
@@ -29,7 +33,7 @@ class Home extends CI_Controller{
                 if ($result)   
                 {
                     $this->session->set_flashdata('message','Successfully inserted');
-                    redirect(uri:'home/allRecords');
+                    redirect(uri:'');
            
                 }
 
@@ -40,6 +44,12 @@ class Home extends CI_Controller{
             
                 }
             }
+        }
+        else
+        {
+            $this->session->set_flashdata('message','All fields are mandatory');
+                    redirect(uri:'');
+        }
         }
 
     public function allRecords()
@@ -87,12 +97,12 @@ class Home extends CI_Controller{
         if ($updated)
         {
             $this->session->set_flashdata('message','we have successfully updated your record');
-            redirect(uri:'home/allRecords');
+            redirect(uri:'');
         }
         else
         {
             $this->session->set_flashdata('message','we cannot update the record right now, please try again after some time');
-            redirect(uri:'home/allRecords');
+            redirect(uri:'');
         }
       }
       else

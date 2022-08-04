@@ -35,7 +35,9 @@
                     <label for="">
                         <h5>Contact</h5>
                     </label>
-                    <input type="number" name="contact" id="contact" value="" class="form-control">
+                    <input type="number" name="contact" id="contact" value="" class="form-control" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="10">
                 </div>
             </div>
         </div>
@@ -59,7 +61,12 @@
                 </select>
             </div>
             <button class="btn btn-primary m-5" type="Submit">Signup </button>
-        </div>
+            </div>
+        <?php echo form_close(); ?>
+        <?php echo form_open(action: 'home/allRecords', attributes: ''); ?>
+        <div>
+                <button class="btn btn-primary m-5">Records</button>
+                </div>
         <?php echo form_close(); ?>
     </div>
 
